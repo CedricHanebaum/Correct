@@ -3,5 +3,5 @@
 .settings/
 *.zip
 bin/
-
+/icons
 

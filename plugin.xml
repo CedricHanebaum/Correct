@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.ui.importWizards">
+      <category
+            id="chanebaum.correctplugin.importWizard.sampleCategory"
+            name="Correct">
+      </category>
+      <wizard
+            category="chanebaum.correctplugin.importWizard.sampleCategory"
+            class="chanebaum.correctplugin.importWizard.ImportWizard"
+            icon="icons/sample.gif"
+            id="chanebaum.correctplugin.importWizard.ImportWizard"
+            name="Import File">
+         <description>
+            Import a file from the local file system into the workspace.
+         </description>
+      </wizard>
+   </extension>
+
+</plugin>
