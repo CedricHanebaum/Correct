@@ -81,6 +81,7 @@ public class ConfigureGroupsPage extends WizardPage {
 		}
 		
 		setControl(comp);
+		setPageComplete(false);
 		
 		loadFromPref();
 	}
@@ -88,6 +89,8 @@ public class ConfigureGroupsPage extends WizardPage {
 	private void updateGroups() {
 		saveToPref();
 		wizard.setGroups(groups);
+		
+		if(groups.size() > 0) setPageComplete(true);
 	}
 	
 	private void loadFromPref() {
@@ -104,6 +107,7 @@ public class ConfigureGroupsPage extends WizardPage {
 			listGroup.select(1);
 			updateMemberList();
 		}
+		updateGroups();
 	}
 	
 	private void saveToPref() {
